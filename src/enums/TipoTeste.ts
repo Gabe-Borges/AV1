@@ -1,0 +1,5 @@
+export enum TipoTeste {
+  ELETRICO = "ELETRICO",
+  HIDRAULICO = "HIDRAULICO",
+  AERODINAMICO = "AERODINAMICO",
+}
