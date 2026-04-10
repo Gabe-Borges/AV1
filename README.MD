@@ -11,17 +11,19 @@ Certifique-se de ter o Node.js instalado no seu computador.
 Abra o terminal na pasta raiz do projeto e siga as instruções abaixo:
 
 1. Instale as dependências do projeto executando o seguinte comando:
-\`\`\`bash
+```bash
 npm install
-\`\`\`
 
+```
 2. Para iniciar o programa em modo de desenvolvimento, execute:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+
+```
 
 3. Alternativamente, para compilar e executar a versão de produção, utilize os comandos:
-\`\`\`bash
+```bash
 npm run build
 npm start
-\`\`\`
+
+```
