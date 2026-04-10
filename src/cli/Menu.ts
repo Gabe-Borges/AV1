@@ -56,7 +56,7 @@ export class Menu {
   private exibirBanner(): void {
     console.log("\n");
     console.log("  ╔══════════════════════════════════════╗");
-    console.log("  ║          AEROCODE v1.0.0             ║");
+    console.log("  ║              AEROCODE                ║");
     console.log("  ║  Gestão de Produção de Aeronaves     ║");
     console.log("  ╚══════════════════════════════════════╝");
     console.log("\n");
@@ -79,7 +79,7 @@ export class Menu {
     let continuar = true;
     while (continuar) {
       const f = this.authService.getFuncionarioLogado();
-      console.log(`\n========== MENU PRINCIPAL [${f?.nivelPermissao}] ==========`);
+      console.log(`\n=== MENU PRINCIPAL [${f?.nivelPermissao}] ===`);
       console.log("1. Aeronaves");
       console.log("2. Peças");
       console.log("3. Etapas de produção");
@@ -101,7 +101,7 @@ export class Menu {
           this.fazerLogin();
           break;
         case "0":
-          console.log("\nEncerrando Aerocode. Até logo!\n");
+          console.log("\nEncerrando.\n");
           continuar = false;
           break;
         default:

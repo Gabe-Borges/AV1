@@ -25,7 +25,7 @@ export class MenuEtapa {
       console.log("5. Associar funcionário a etapa");
       console.log("0. Voltar");
 
-      const opcao = rl.question("\nOpção: ").trim();
+      const opcao = rl.question("\nOpcao: ").trim();
 
       switch (opcao) {
         case "1": this.adicionar(); break;

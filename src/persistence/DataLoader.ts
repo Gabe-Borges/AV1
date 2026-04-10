@@ -5,7 +5,7 @@ import { Etapa } from "../models/Etapa";
 import { Funcionario } from "../models/Funcionario";
 import { Teste } from "../models/Teste";
 
-// ─── Funcionários ────────────────────────────────────────────────────────────
+// Funcionários
 
 export function salvarFuncionarios(funcionarios: Funcionario[]): void {
   salvarLinhas("funcionarios.txt", funcionarios.map(f => f.serializar()));
@@ -15,7 +15,7 @@ export function carregarFuncionarios(): Funcionario[] {
   return carregarLinhas("funcionarios.txt").map(Funcionario.desserializar);
 }
 
-// ─── Aeronaves (metadados) ───────────────────────────────────────────────────
+// Aeronaves 
 
 export function salvarAeronaves(aeronaves: Aeronave[]): void {
   salvarLinhas("aeronaves.txt", aeronaves.map(a => a.serializar()));
@@ -25,7 +25,7 @@ export function carregarAeronaves(): Aeronave[] {
   return carregarLinhas("aeronaves.txt").map(Aeronave.desserializar);
 }
 
-// ─── Peças ───────────────────────────────────────────────────────────────────
+// Peças
 
 export function salvarPecas(codigoAeronave: string, pecas: Peca[]): void {
   salvarLinhas(`pecas_${codigoAeronave}.txt`, pecas.map(p => p.serializar()));
@@ -35,8 +35,7 @@ export function carregarPecas(codigoAeronave: string): Peca[] {
   return carregarLinhas(`pecas_${codigoAeronave}.txt`).map(Peca.desserializar);
 }
 
-// ─── Etapas ──────────────────────────────────────────────────────────────────
-
+// Etapas
 export function salvarEtapas(codigoAeronave: string, etapas: Etapa[], funcionarios: Funcionario[]): void {
   const linhas = etapas.map(e => {
     const ids = e.funcionarios.map(f => f.id).join(";");
@@ -57,7 +56,7 @@ export function carregarEtapas(codigoAeronave: string, funcionarios: Funcionario
   });
 }
 
-// ─── Testes ──────────────────────────────────────────────────────────────────
+// Testes
 
 export function salvarTestes(codigoAeronave: string, testes: Teste[]): void {
   salvarLinhas(`testes_${codigoAeronave}.txt`, testes.map(t => t.serializar()));
@@ -67,7 +66,7 @@ export function carregarTestes(codigoAeronave: string): Teste[] {
   return carregarLinhas(`testes_${codigoAeronave}.txt`).map(Teste.desserializar);
 }
 
-// ─── Carga completa ───────────────────────────────────────────────────────────
+// Carga completa
 
 export function carregarTudo(aeronaves: Aeronave[], funcionarios: Funcionario[]): void {
   for (const aeronave of aeronaves) {
@@ -77,7 +76,7 @@ export function carregarTudo(aeronaves: Aeronave[], funcionarios: Funcionario[])
   }
 }
 
-// ─── Salvar tudo ─────────────────────────────────────────────────────────────
+// Salvar tudo
 
 export function salvarTudo(aeronaves: Aeronave[], funcionarios: Funcionario[]): void {
   salvarAeronaves(aeronaves);

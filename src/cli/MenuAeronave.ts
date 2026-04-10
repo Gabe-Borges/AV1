@@ -30,7 +30,7 @@ export class MenuAeronave {
         case "3": this.exibirDetalhes(); break;
         case "4": this.gerarRelatorio(); break;
         case "0": continuar = false; break;
-        default: console.log("\n[AVISO] Opção inválida.");
+        default: console.log("\n[AVISO] Opcao inválida.");
       }
     }
   }
